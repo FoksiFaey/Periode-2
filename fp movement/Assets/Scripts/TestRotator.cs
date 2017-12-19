@@ -23,12 +23,12 @@ public class TestRotator : MonoBehaviour
     void Update()
     {
 
-        view.y = Input.GetAxis("Mouse X");
+       
         camlook.x = -Input.GetAxis("Mouse Y");
         transform.Rotate(view * sensetivety);
         cam.transform.Rotate(camlook * sensetivety);
-        camlook.x = Mathf.Clamp(camlook.x, -5000.0f, 5000.0f);
-        transform.eulerAngles = (new Vector3(camlook.x, transform.eulerAngles.y, 0.0f));
+        camlook.x = Mathf.Clamp(camlook.x, -50.0f, 50.0f);
+        
     }
 }
     

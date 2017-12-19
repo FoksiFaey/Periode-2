@@ -10,6 +10,9 @@ public class MovementScript : MonoBehaviour {
     public Rigidbody r;
     public bool b;
     public Vector3 height;
+    public Vector3 view;
+    public GameObject cam;
+    public Vector3 camlook;
     // Use this for initialization
     void Start () {
 		
@@ -17,6 +20,8 @@ public class MovementScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        view.y = Input.GetAxis("Mouse X");
+        transform.eulerAngles = (new Vector3(camlook.x, transform.eulerAngles.y, 0.0f));
         transform.Translate(move * Time.deltaTime * speed);
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");

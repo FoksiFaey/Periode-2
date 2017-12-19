@@ -225,6 +225,9 @@ MonoBehaviour:
   r: {fileID: 0}
   b: 0
   height: {x: 0, y: 0, z: 0}
+  view: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  camlook: {x: 0, y: 0, z: 0}
 --- !u!65 &341778616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1090,7 +1093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotate: {x: 0, y: 0, z: 0}
   view: {x: 0, y: 0, z: 0}
-  cam: {fileID: 0}
+  cam: {fileID: 607958755}
   camlook: {x: 0, y: 0, z: 0}
   sensetivety: 0
 --- !u!1 &2019668878
