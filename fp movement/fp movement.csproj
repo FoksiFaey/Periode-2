@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\MovementScript.cs" />
     <Compile Include="Assets\Scripts\RaycastTest.cs" />
     <Compile Include="Assets\Scripts\SwitchCam.cs" />
+    <Compile Include="Assets\Scripts\SwordDamage.cs" />
     <Compile Include="Assets\Scripts\TestRotator.cs" />
     <Compile Include="Assets\Scripts\TestScript.cs" />
   </ItemGroup>

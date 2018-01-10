@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwordDamage : MonoBehaviour
+public class RaycastTest : MonoBehaviour
 {
     public GameObject particle;
     public bool startSlash;
@@ -16,8 +16,7 @@ public class SwordDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(transform.position, transform.forward * 2, Color.red);
-        Debug.DrawRay(transform.position, transform.forward * -1, Color.green);
+        
         if (Input.GetButtonDown("Fire1"))
         {
             GameObject.Find("AniSword").GetComponent<Animator>().SetBool("Slash", true);
