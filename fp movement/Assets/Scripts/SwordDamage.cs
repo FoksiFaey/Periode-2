@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RaycastTest : MonoBehaviour
+public class SwordDamage : MonoBehaviour
 {
     public GameObject particle;
     public bool startSlash;
@@ -47,7 +47,7 @@ public class RaycastTest : MonoBehaviour
         {
             GameObject g = Instantiate(particle, other.transform.position, Quaternion.identity);  
              Destroy(g, 1);
-             if (other.tag == "Enemy")
+             if (other.gameObject.tag == "Enemy")
              {
               other.gameObject.GetComponent<HealthScript>().LoseHP(1);
              }

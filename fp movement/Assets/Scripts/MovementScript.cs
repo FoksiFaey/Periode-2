@@ -12,10 +12,12 @@ public class MovementScript : MonoBehaviour {
     public Vector3 height;
     public Vector3 view;
     public Vector3 camlook;
+    public Vector3 reset;
     // Use this for initialization
     void Start () {
 		Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        
 	}
 	
 	// Update is called once per frame
@@ -52,6 +54,13 @@ public class MovementScript : MonoBehaviour {
         {
             speed /= 2f;
         }
+        if (transform.position.y <= -20)
+        {
+            reset.y = 10;
+            transform.position = reset;
+            print(transform.position);
+        }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
