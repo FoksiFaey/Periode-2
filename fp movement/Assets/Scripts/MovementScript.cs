@@ -13,11 +13,13 @@ public class MovementScript : MonoBehaviour {
     public Vector3 view;
     public Vector3 camlook;
     public Vector3 reset;
+    public GameObject player;
+    public GameObject cam;
+    public GameObject button1;
+    public GameObject button2;
     // Use this for initialization
     void Start () {
-		Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        
+		
 	}
 	
 	// Update is called once per frame
@@ -25,14 +27,17 @@ public class MovementScript : MonoBehaviour {
         transform.Translate(move * Time.deltaTime * speed);
         if (Input.GetButtonDown("Fire1"))
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            
         }
         
         if (Input.GetButton("Escape"))
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            button1.SetActive(true);
+            button2.SetActive(true);
+            player.SetActive(false);
+            cam.SetActive(true);
         }
         x = Input.GetAxis("Vertical");
         z = Input.GetAxis("Horizontal");

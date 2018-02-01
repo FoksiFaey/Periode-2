@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Footballl
   - Enemy
+  - Sword
   layers:
   - Default
   - TransparentFX
