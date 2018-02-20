@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
 		if (health <= 0)
         {
-            print("Stopped");
+            Application.Quit();
         }
 	}
 }
